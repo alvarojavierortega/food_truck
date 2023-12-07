@@ -22,7 +22,12 @@ export default function FoodTruckForm() {
             </Form.Select>
           </Form.Group>
 
-          <Button type="submit">Find food trucks</Button>
+          <Button 
+            type="submit" 
+            style={{fontSize:'24px', margin:'auto', width:'100%'}}
+            >
+            Find food trucks
+          </Button>
 
         </fieldset>
       </Form>

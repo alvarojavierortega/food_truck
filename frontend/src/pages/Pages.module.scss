@@ -1,11 +1,9 @@
-main {
-    margin: 24px 24px;
-  }
+@import '../styles/_variables.scss';
 
-  .foodTruckItems {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-left: 17%;
-    margin-top: 1rem;
-  }
+.title {
+  color: #afb7c2;
+  width: fit-content;
+  margin: auto;
+  padding: 10px;
+
+}
