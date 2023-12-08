@@ -1,9 +1,10 @@
 from rest_framework import serializers
 from food_trucks.models import Applicant, Location
 from datetime import datetime
+import pytz
 
 FORMAT_DATETIME = "%m/%d/%Y %H:%M:%S %p"
-DJANGO_FORMAT_DATETIME = 'YYYY-MM-DDThh:mm[:ss[.uuuuuu]][+HH:MM|-HH:MM|Z]'
+DJANGO_FORMAT_DATETIME = 'YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ]'
 
 class ApplicantReaderSerializer(serializers.ModelSerializer):
     approved = serializers.DateTimeField(
@@ -29,11 +30,14 @@ class LocationField(serializers.Field):
         }
         return value
     
-class CustomDateTimeField(serializers.DateTimeField):
+class CustomDateTimeField(serializers.Field):
 
     def to_internal_value(self, str_value):
+        if str_value == "":
+            return None
         value = datetime.strptime(str_value, FORMAT_DATETIME)
-        return value.strftime(DJANGO_FORMAT_DATETIME)  
+        value = value.replace(tzinfo=pytz.UTC)
+        return value
 
 
 class ApplicantWriterSerializer(serializers.ModelSerializer):

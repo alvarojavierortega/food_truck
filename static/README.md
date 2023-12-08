@@ -1,0 +1,1 @@
+This folder is used for DJANGO to store static files. This will be useful when DEBUG variable in .env file is True.

@@ -63,6 +63,15 @@ python manage.py fake_populate <size_batch>
 
 this command populates the Locations and Applicants models by considering a size_batch relation of 1 to 10.
 
+### CLI commands examples
+
+```bash
+python manage.py fake_location 100
+python manage.py fake_trucks 1000
+python manage.py fake_populate 200
+```
+
+
 ## 📝 Documentation
 
 The backend has CRUD endpoints for each model. Futhermore, an amazing service to upload data from a CSV file is implemented. For more details, please go to Swagger documentation in the following link:
@@ -73,7 +82,38 @@ http://localhost:5050/api/docs/
 
 ## How to run this app 
 
+This application makes use of Python 3.11. Create a virtual environment of this Python version and install all packages specified in the file requirements.txt
 
+
+### Option 1: Running in DEBUG True mode with the generated Database (Recommended)
+
+Use the following command to run the backend
+
+```bash
+python manage.py runserver 0.0.0.0:5050
+```
+Then, follow the next steps, go to the folder "frontend" and user the npm commands to run the React application. You can follow the next commands to run the frontend
+
+
+```bash
+cd frontend
+npm run dev
+```
+
+if you want to run this app with DEBUG = False, you have to take into account that you need to generate the static files for Django and also you have to compile the Typescript scripts to generate the Javascript files for React.
+
+### Option 2: Running in DEBUG True mode and generate a new Database 
+
+Follow the next steps
+
+* Delete the db.sqlite3 file
+* Create a new database by using the next commands
+
+```bash
+python manage.py makemigrations
+python manage.py migrate
+```
+At this moment, you database is empty. You can populate it using the CLI commands. However, you can also use the data.csv file through the upload data service. See the api/docs endpoint of the backend for more details.
 
 
 ## 🦸 Author
