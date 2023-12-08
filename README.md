@@ -44,6 +44,8 @@ In addition, if one day you get lost in my application, Bonnie always will help 
 
 ## ⚙️ Useful CLI commands
 
+To populate the database with fake value, the following commands are provided
+
 ```bash
 python manage.py fake_location <size_batch>
 ```
@@ -92,7 +94,7 @@ Use the following command to run the backend
 ```bash
 python manage.py runserver 0.0.0.0:5050
 ```
-Then, follow the next steps, go to the folder "frontend" and user the npm commands to run the React application. You can follow the next commands to run the frontend
+Then, follow the next steps, go to the folder "frontend" and use the npm commands to run the React application. You can follow the next commands to run the frontend
 
 
 ```bash
