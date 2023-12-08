@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from food_trucks.models import Applicant, Location
-from .applicant import ApplicantReaderSerializer
+from .applicant import ApplicantReaderSerializer, CustomDateTimeField
 
 
 class MassiveUploadDataSerializer(serializers.ModelSerializer):
@@ -10,6 +10,8 @@ class MassiveUploadDataSerializer(serializers.ModelSerializer):
     facilityType = serializers.ChoiceField(
         choices=Applicant.FACILITY_TYPE_CHOICES,
         help_text=str(Applicant.FACILITY_TYPE_CHOICES))
+    approved = CustomDateTimeField()
+    expirationDate = CustomDateTimeField()
 
     class Meta:
         model = Applicant
