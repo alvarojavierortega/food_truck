@@ -2,7 +2,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import styles from './Form.module.scss';
 import { CardItem } from 'types/cardItem';
-import { Coordinate, Coordinates } from 'types/coodinates';
+import { Coordinate, Coordinates } from 'types/coordinates';
 
 
 type Props = {

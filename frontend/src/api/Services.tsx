@@ -1,4 +1,4 @@
-import { Coordinates } from "types/coodinates";
+import { Coordinates } from "types/coordinates";
 import { ApiCoordinate } from "./types"
 
 export const getCoordinateOptions = async () => {

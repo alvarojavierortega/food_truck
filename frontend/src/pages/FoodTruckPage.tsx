@@ -3,7 +3,7 @@ import FoodTruckForm from '../components/Form';
 import Trucks from '../components/Trucks';
 import styles from './Pages.module.scss'
 import React, { useEffect, useState } from "react";
-import { Coordinate, Coordinates } from 'types/coodinates';
+import { Coordinate, Coordinates } from 'types/coordinates';
 import { getCoordinateOptions} from '../api/Services';
 
 
