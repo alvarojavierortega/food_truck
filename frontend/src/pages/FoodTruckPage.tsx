@@ -32,13 +32,12 @@ export default function FoodTruckPage() {
   },[])  
 
 
-  
-
   return (
     <>
       <h1 className={styles.title}> Find your amazing food banner </h1>
       <FoodTruckForm 
         coordinateOptions={coordinateOptions}
+        selectedCoordinate={selectedCoordinate}
         setSelectedCoordinate={(value:Coordinate) => setSelectedCoordinate(value)}
         setItems={(value:CardItem[]) => setItems(value)}
       />

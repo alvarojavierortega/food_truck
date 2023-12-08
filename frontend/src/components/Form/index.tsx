@@ -3,10 +3,12 @@ import Form from 'react-bootstrap/Form';
 import styles from './Form.module.scss';
 import { CardItem } from 'types/cardItem';
 import { Coordinate, Coordinates } from 'types/coordinates';
+import { getFoodTrucks } from '../../api/Services';
 
 
 type Props = {
   coordinateOptions:  Coordinates,
+  selectedCoordinate: Coordinate,
   setSelectedCoordinate: (valor:Coordinate) => void,
   setItems: (valor:CardItem[]) => void,
 }
@@ -20,6 +22,7 @@ function getRandomImage() {
 export default function FoodTruckForm(
   {
     coordinateOptions,
+    selectedCoordinate,
     setSelectedCoordinate, 
     setItems }:Props) 
   {
@@ -35,57 +38,61 @@ export default function FoodTruckForm(
   const searchTrucks = (event:React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
 
-    
-    // fetch('http://localhost:8080/db')
-    //       .then(resposta => resposta.json())
-    //       .then(datos => {setRacas(dados)})  
+    const fetchData = async () => {
+      const items = await getFoodTrucks(selectedCoordinate.id);
+      const items1:CardItem[] = items.map(obj => ({ ...obj, image: getRandomImage() }))
+      setItems(items1)
+    }
 
-    const items: Omit<CardItem, 'image'>[] = [
-      {
-        id:1,
-        title:'my title',
-        description: 'some description'
-      },
-      {
-        id:2,
-        title:'my title',
-        description: 'some description'
-      },
-      {
-        id:3,
-        title:'my title',
-        description: 'some description'
-      },
-      {
-        id:4,
-        title:'my title',
-        description: 'some description'
-      },
-      {
-        id:5,
-        title:'my title',
-        description: 'some description'
-      },
-      {
-        id:6,
-        title:'my title',
-        description: 'some description'
-      },
-      {
-        id:7,
-        title:'my title',
-        description: 'some description'
-      },
-      {
-        id:8,
-        title:'my title',
-        description: 'some description'
-      }
-    ]
+    fetchData()
 
-    const items1:CardItem[] = items.map(obj => ({ ...obj, image: getRandomImage() }))
 
-    setItems(items1)
+    // const items: Omit<CardItem, 'image'>[] = [
+    //   {
+    //     id:1,
+    //     title:'my title',
+    //     description: 'some description'
+    //   },
+    //   {
+    //     id:2,
+    //     title:'my title',
+    //     description: 'some description'
+    //   },
+    //   {
+    //     id:3,
+    //     title:'my title',
+    //     description: 'some description'
+    //   },
+    //   {
+    //     id:4,
+    //     title:'my title',
+    //     description: 'some description'
+    //   },
+    //   {
+    //     id:5,
+    //     title:'my title',
+    //     description: 'some description'
+    //   },
+    //   {
+    //     id:6,
+    //     title:'my title',
+    //     description: 'some description'
+    //   },
+    //   {
+    //     id:7,
+    //     title:'my title',
+    //     description: 'some description'
+    //   },
+    //   {
+    //     id:8,
+    //     title:'my title',
+    //     description: 'some description'
+    //   }
+    // ]
+
+    // const items1:CardItem[] = items.map(obj => ({ ...obj, image: getRandomImage() }))
+
+    // setItems(items1)
 
   }
 

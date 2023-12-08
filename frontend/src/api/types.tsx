@@ -5,3 +5,13 @@ export type ApiCoordinate = {
     longitude: string;
     applicants: []
   };
+
+
+export type ApiFoodTruck = {
+  id: number;
+  applicant: string;
+  facilityType: string;
+  cnn: number,
+  locationDescription: string,
+  location: number
+}
