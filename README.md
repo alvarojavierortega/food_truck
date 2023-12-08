@@ -1,20 +1,24 @@
-<h4 align="center"> 
-	<img alt="Food trucks' application" title="#Food trucks' application" src="./frontend/public/assets/banner1.png" />
-</h4>
+<div align="center"> 
+	<img alt="Food trucks' application" src="./frontend/public/assets/banner1.png" />
+</div>
+<div align="center">    
+    <h1 > Food trucks' application </h1>
+</div>
+
 <p align="center">
  <a href="#-About-this-project">About this project</a> •
  <a href="#-Technologies">Technologies</a> •
- <a href="#-Usful-CLI-commands">CLI commands</a> •
+ <a href="#-Useful-CLI-commands">CLI commands</a> •
  <a href="#-Documentation">Documentation</a> •
  <a href="#-How-to-run-this-project">How to run</a> •
  <a href="#-Author">Author</a> • 
 </p>
 
-<h1 align="center">
-    <img alt="Food trucks' application" title="#Food trucks' application" src="./frontend/public/assets/banner2.png" />
-</h1>
+<div align="center">    
+    <img alt="Food trucks' application" src="./frontend/public/assets/banner2.png" />
+</div>
 
-# Food trucks' application
+# Content
 
 ## 💻 About this project
 
@@ -24,10 +28,19 @@ Each location can have several trucks. Therefore, at the frontend, an interface 
 ## 🛠 Technologies
 
 ### 🧭 Backend: 
-The backend is implemented in Rest Django. Therefore, it is written in Python.
+The backend is implemented using Rest Django. Therefore, it is written in Python.
+In the Figure below, you can see the Swagger documentation. Note that from the point of view of backend, the trucks are considered as applicants.
+
+![Swagger](./frontend/public/assets/documentation/backend1.png)
 
 ### 🎨 Frontend:
 The frontend is implemented using React and Typescript.
+One of the amazing results that you can find with this application is shown in the Figure below.
+![Main](./frontend/public/assets/documentation/frontend1.png)
+
+In addition, if one day you get lost in my application, Bonnie always will help you to go back on the right track.
+
+![NotFound](./frontend/public/assets/documentation/frontend2.png)
 
 ## ⚙️ Useful CLI commands
 
@@ -52,11 +65,24 @@ this command populates the Locations and Applicants models by considering a size
 
 ## 📝 Documentation
 
-The backend has CRUD endpoints for each model. For more details, please go to the following link:
+The backend has CRUD endpoints for each model. Futhermore, an amazing service to upload data from a CSV file is implemented. For more details, please go to Swagger documentation in the following link:
 
 ```
 http://localhost:5050/api/docs/
 ```
 
 ## How to run this app 
+
+
+## 🦸 Author
+
+<a href="https://www.linkedin.com/in/alvaro-javier-ortega-951241174/">
+ <img style="border-radius: 50%;" src="https://shorturl.at/moLO9" width="100px;" alt="M."/>
+ <br />
+ <sub><b>Alvaro Ortega</b></sub></a> <a href="https://www.linkedin.com/in/alvaro-javier-ortega-951241174/" >🚀</a>
+ <br />
+
+[![Linkedin Badge](https://img.shields.io/badge/-AlvaroOrtega-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/ne%C3%ADlton-seguins-bb8786a6/)](https://www.linkedin.com/in/alvaro-javier-ortega-951241174//)
+[![Gmail Badge](https://img.shields.io/badge/-alvarojavierortega.com@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:alvarojavierortega.com@gmail.com)](alvarojavierortega.com@gmail.com)
+
 

@@ -1,14 +1,3 @@
-// import { ReactComponent as Logo } from '../../assets/logo.svg';
-
-
-// export default function Footer() {
-//   return (
-//     <footer >
-//       <Logo />
-//     </footer>
-//   );
-// }
-
 import styles from './Banner.module.scss';
 
 

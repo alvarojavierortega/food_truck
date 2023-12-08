@@ -142,6 +142,12 @@ else:
 # }
 
 
+SWAGGER_SETTINGS = {
+    'SECURITY_DEFINITIONS': None,
+    'USE_SESSION_AUTH': False
+}
+
+
 # CORS_ALLOWED_ORIGINS = [
 #     "http://localhost:5713",
 #     "http://127.0.0.1:5713",
