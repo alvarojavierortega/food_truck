@@ -8,4 +8,7 @@ router.register(r'locations', views.LocationViewSet, basename="location")
 
 urlpatterns = [
     path('', include(router.urls)),
+    path('upload-data/', 
+         views.MassiveUploadData.as_view(), 
+         name='upload_data'),
 ]

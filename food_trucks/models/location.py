@@ -6,11 +6,11 @@ class Location(models.Model):
     locationId = models.AutoField(
         primary_key=True)
     latitude = models.DecimalField(
-        max_digits=17, 
-        decimal_places=14) 
+        max_digits=20, 
+        decimal_places=17) 
     longitude = models.DecimalField(
-        max_digits=17, 
-        decimal_places=14) 
+        max_digits=20, 
+        decimal_places=17) 
     
     def __str__(self):
         return f"lat: {self.latitude}, lon: {self.longitude}"

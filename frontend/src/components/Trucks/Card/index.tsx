@@ -17,8 +17,7 @@ const FoodTruckCard = ({items}: CardItems) => {
   const handleShow = (item:CardItem) => {
     setShow(true)
     setModalTitle(item.title)
-    const {image: _, ...info} = item;
-    setModalBody(JSON.stringify(info, null, 4))
+    setModalBody(JSON.stringify(item.modal, null, 4))
   };
 
   return  (

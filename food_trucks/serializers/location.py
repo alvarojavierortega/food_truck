@@ -3,8 +3,15 @@ from food_trucks.models import Location
 from .applicant import ApplicantReaderSerializer
 
 
-class LocationReaderSerializer(serializers.ModelSerializer):
+class DetailedLocationReaderSerializer(serializers.ModelSerializer):
     applicants = ApplicantReaderSerializer(many=True)
+
+    class Meta:
+        model = Location
+        fields =  '__all__'
+
+
+class LocationReaderSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Location

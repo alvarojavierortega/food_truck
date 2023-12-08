@@ -3,7 +3,8 @@ from drf_yasg.utils import swagger_auto_schema
 from drf_yasg import openapi
 from django_filters import rest_framework as filters
 from food_trucks.models import Location
-from food_trucks.serializers import (LocationReaderSerializer,
+from food_trucks.serializers import (DetailedLocationReaderSerializer,
+                                     LocationReaderSerializer,
                                      LocationWriterSerializer)
 from food_trucks.filters import LocationFilter
 from rest_framework import viewsets, status
@@ -35,6 +36,8 @@ class LocationViewSet(viewsets.ModelViewSet):
     filterset_class = LocationFilter
 
     def get_serializer_class(self):
-        if self.action in ['list', 'retrieve']:
+        if self.action == 'list':
             return LocationReaderSerializer
+        elif self.action == 'retrieve':
+            return DetailedLocationReaderSerializer
         return LocationWriterSerializer

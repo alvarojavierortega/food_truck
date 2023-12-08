@@ -136,10 +136,10 @@ else:
     ALLOWED_HOSTS = env.list('ALLOWED_HOSTS_PROD')
 
 
-REST_FRAMEWORK = {
-    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
-    'PAGE_SIZE': 100
-}
+# REST_FRAMEWORK = {
+#     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+#     'PAGE_SIZE': 100
+# }
 
 
 # CORS_ALLOWED_ORIGINS = [
@@ -149,26 +149,4 @@ REST_FRAMEWORK = {
 
 CORS_ALLOW_ALL_ORIGINS = True
 
-# SWAGGER_SETTINGS = {
-#     'SECURITY_DEFINITIONS': {
-#         'Bearer': {
-#             'type': 'apiKey',
-#             'name': 'Authorization',
-#             'in': 'header'
-#         },
-#         'Token': {
-#             'type': 'apiKey',
-#             'name': 'Authorization',
-#             'in': 'header'
-#         },
-#         'Api-Key': {
-#             'type': 'apiKey',
-#             'in': 'header',
-#             'name': 'Authorization'
-#         }
-#     },
-#     'LOGIN_URL': 'authemail-login',
-#     'LOGOUT_URL': 'authemail-logout',
-#     'USE_SESSION_AUTH': False
-# }
 

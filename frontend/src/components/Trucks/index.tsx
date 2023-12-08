@@ -6,7 +6,6 @@ type CardItems={
   items: CardItem[]
 }
 
-
 export default function Trucks({items}: CardItems) {
 
   return (
