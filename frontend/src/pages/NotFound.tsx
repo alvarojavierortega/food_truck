@@ -1,37 +1,37 @@
-// import styles from './NotFound.module.scss';
-// import { ReactComponent as NotFoundImage } from 'assets/not_found.svg';
-// import classNames from 'classnames';
-// import stylesTema from 'styles/Tema.module.scss';
-// import { useNavigate } from 'react-router-dom';
+  import styles from './Pages.module.scss';
+  import error404 from '../assets/error_404.png'
+  import { useNavigate } from 'react-router-dom';
+  import Button from 'react-bootstrap/Button';
+  
+  export default function NotFound() {
+      const navigate = useNavigate();
+  
+      return (
+          <>
+            <div className={styles.container}>
+                <span className={styles.text404}>404</span>
 
-// export default function NotFound() {
-//   const navigate = useNavigate();
-//   return (
-//     <div className={classNames({
-//       [styles.container]: true,
-//       [stylesTema.container]: true
-//     })}>
-//       <div className={styles.voltar}>
-//         <button onClick={() => navigate(-1)}>
-//           {'< Voltar'}
-//         </button>
-//       </div>
-//       <NotFoundImage />
-//     </div>
-//   );
-// }
+                <h1 className={styles.title}>
+                    Ops! Page not found.
+                </h1>
 
+                
+                <Button 
+                  variant="success" 
+                  size="lg" 
+                  className={styles.backButton}
+                  onClick={() => navigate(-1)}
+                  >Back
+                </Button>{' '}
 
-export function NotFound() {
-
-    return (
-      <>
-        <div>
-          HELLO NotFound
-        </div>
-      </>
-    )
+                <img
+                    className={styles.dogImage}
+                    src={error404}
+                    alt="A dog with glasses"
+                />
+            </div>
+            <div className={styles.blankSpace}></div>
+        </>
+  
+      )
   }
-  
-  export default NotFound
-  

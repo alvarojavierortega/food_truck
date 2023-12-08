@@ -7,3 +7,49 @@
   padding: 10px;
 
 }
+
+.container {
+  position: relative;
+  text-align: center;
+  color: $text-color;
+  padding: 0 1.5rem 6.5rem;
+}
+
+span {
+  margin: 0;
+  padding: 0;
+}
+
+
+.text404 {
+  display: block;
+  color: $text-color;
+  font-family: $fonte-bold;
+  font-size: 6rem;
+  font-weight: 700;
+}
+
+.title {
+  font-family: $fonte-bold;
+  font-size: 3rem;
+  width: fit-content;
+  margin: 0 1rem 4rem 0;
+}
+
+.dogImage {
+  position: absolute;
+  height: 25vw;
+  bottom: calc(-25vw * 0.5);
+}
+
+
+.backButton {
+  position: absolute;
+  width: 300px;
+  bottom: calc(-5vw * 0.5);
+  left: calc(+25vw * 0.5);
+}
+
+.blankSpace {
+  height: 40vh;
+}
