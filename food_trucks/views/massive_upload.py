@@ -1,35 +1,4 @@
-"""
-  locationid, int
-  Applicant, str
-  FacilityType, enum(Push Cart, Truck) blank
-  cnn, int
-  LocationDescription, str, blank
-  Address, str
-  blocklot, ?
-  block,lot, str, str short blank
-  permit, str
-  Status, enum(APPROVED, REQUESTED, SUSPEND, EXPIRED, ISSUED)
-  FoodItems, str
-  X, float, 5 decimals, blank
-  Y, float, 5 decimals, blank
-  Latitude, 0?
-  Longitude,
-  Schedule, link
-  dayshours, str, blank
-  NOISent, str, all blanks
-  Approved, datetime, blank
-  Received, int
-  PriorPermit, enum(0,1)
-  ExpirationDate, datetime, blank
-  Location, ?
-  Fire Prevention Districts, int, blank 
-  Police Districts, int blank 
-  Supervisor Districts, int  blank 
-  Zip Codes, int blank 
-  Neighborhoods (old) int blank 
 
-   
-"""
 
 from drf_yasg import openapi
 from drf_yasg.utils import swagger_auto_schema
@@ -49,7 +18,28 @@ MAP_KEYS = {
     "cnn": "cnn",
     "LocationDescription": "locationDescription",
     "Latitude": "latitude",
-    "Longitude": "longitude"
+    "Longitude": "longitude",
+    "Address": "address",
+    "block": "block",
+    "lot": "lot",
+    "permit": "permit", 
+    "Status": "status",
+    "FoodItems": "foodItems", 
+    "X": "x", 
+    "Y": "y",
+    "Schedule": "schedule", 
+    "dayshours": "daysHours",
+    "NOISent": "NOISent", 
+    "Approved": "approved", 
+    "Received": "received", 
+    "PriorPermit": "priorPermit", 
+    "ExpirationDate": "expirationDate", 
+    "Fire Prevention Districts": "firePreventionDistricts", 
+    "Police Districts": "policeDistricts", 
+    "Supervisor Districts": "supervisorDistricts",
+    "Zip Codes": "zipCode",
+    "Neighborhoods (old)": "neighborhoodsOld"
+
 }
 
 
