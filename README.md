@@ -83,6 +83,6 @@ http://localhost:5050/api/docs/
  <br />
 
 [![Linkedin Badge](https://img.shields.io/badge/-AlvaroOrtega-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/ne%C3%ADlton-seguins-bb8786a6/)](https://www.linkedin.com/in/alvaro-javier-ortega-951241174//)
-[![Gmail Badge](https://img.shields.io/badge/-alvarojavierortega.com@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:alvarojavierortega.com@gmail.com)](alvarojavierortega.com@gmail.com)
+[![Gmail Badge](https://img.shields.io/badge/-alvarojavierortega.com@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:alvarojavierortega.com@gmail.com)](mailto:alvarojavierortega.com@gmail.com)
 
 
